@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: familyapply
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP  
+  ports:
+  - name: "familyapply"
+    port: 8080
+  selector:
+    app: familyapply
